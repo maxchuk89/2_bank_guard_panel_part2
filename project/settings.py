@@ -1,13 +1,16 @@
 import os
 from pathlib import Path
 from environs import Env
+from dotenv import load_dotenv
+
+load_dotenv()
 
 env = Env()
 env.read_env()
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = 'secret-key'
+SECRET_KEY = os.getenv('SECRET_KEY')
 
 DEBUG = env.bool('DEBUG', default=True)
 
