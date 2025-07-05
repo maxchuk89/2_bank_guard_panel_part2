@@ -174,3 +174,7 @@ cython_debug/
 .pypirc
 
 2_bank_guard_panel_part2.txt
+
+.replit
+poetry.lock
+pyproject.toml
